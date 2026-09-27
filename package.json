@@ -1,0 +1,22 @@
+{
+  "name": "beacon",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.14"
+  },
+  "exports": {
+    ".": "./src/simulator/index.ts",
+    "./simulator": "./src/simulator/index.ts"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test test/*.test.ts",
+    "typecheck": "tsc --strict --noEmit --pretty false --module nodenext --moduleResolution nodenext --target es2022 --moduleDetection force --verbatimModuleSyntax --allowImportingTsExtensions --skipLibCheck src/simulator/index.ts test/emit-device-reading.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.0",
+    "ajv": "^8.17.1",
+    "typescript": "^5.9.2"
+  }
+}
