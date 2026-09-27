@@ -1,5 +1,5 @@
-# beacon ownership
+# Beacon ownership
 
-No simulator or firmware is in this repository. `README.md` is unchanged.
+Beacon owns the DeviceReading simulator and ESP32 firmware. It emits device measurements and manual override input. It does not choose routes.
 
-Beacon will emit `DeviceReading` only. It does not choose an edge. Contract authority is conduit `contracts/` on `cursor/wave-0-contract-freeze-90fb`, package version `wave0.2`.
+Conduit `contracts/` is the wire contract authority. Conduit interprets device readings as venue evidence.
